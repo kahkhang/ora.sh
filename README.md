@@ -26,7 +26,6 @@ task_2() {
 }
 
 stty -echo && tput civis
-
 spinner "Task 1" task_1 output1
 spinner "Task 2" task_2 output2
 tput el
