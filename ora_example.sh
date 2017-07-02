@@ -3,15 +3,13 @@
 source ora.sh
 
 task_1() {
-  echo "output1"
-  sleep 5
-  echo "output2"
+  sleep 2
+  echo "ora.sh is"
 }
 
 task_2() {
-  echo "output1"
-  sleep 5
-  echo "output2"
+  sleep 2
+  echo "awesome"
 }
 
 stty -echo
@@ -21,7 +19,6 @@ spinner "Task 1" task_1 output1
 spinner "Task 2" task_2 output2
 tput el
 
-echo "Output1: $output1"
-echo "Output2: $output2"
+echo "Output: ${CYAN}$output1 $output2${NORMAL}"
 tput cnorm
 stty echo

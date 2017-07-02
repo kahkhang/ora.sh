@@ -1,21 +1,21 @@
 ## Bash terminal spinner
 Ora.sh is a dependency-free elegant terminal spinner.
 
+![](out.gif)
+
 ### Example
 
 ```sh
 source ora.sh
 
 task_1() {
-  echo "output1"
-  sleep 5
-  echo "output2"
+  sleep 2
+  echo "ora.sh is"
 }
 
 task_2() {
-  echo "output1"
-  sleep 5
-  echo "output2"
+  sleep 2
+  echo "awesome"
 }
 
 stty -echo
@@ -25,9 +25,9 @@ spinner "Task 1" task_1 output1
 spinner "Task 2" task_2 output2
 tput el
 
-echo "Output1: $output1"
-echo "Output2: $output2"
-
+echo "Task 1's output: $output1"
+echo "Task 2's output: $output2"
 tput cnorm
 stty echo
+
 ```

@@ -1,6 +1,10 @@
 #!/bin/bash
 _SPINNER_POS=0
 _TASK_OUTPUT=""
+CYAN=$(tput setaf 6)
+NORMAL=$(tput sgr0)
+BOLD=$(tput bold)
+
 spinner() {
     _TASK_OUTPUT=""
     local delay=0.05
@@ -30,7 +34,7 @@ spinner() {
     i=$(($i%10))
 
     while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
-        printf "%s" "${list[i]}"
+        printf "%s" "${CYAN}${list[i]}${NORMAL}"
         i=$(($i+1))
         i=$(($i%10))
         sleep $delay
