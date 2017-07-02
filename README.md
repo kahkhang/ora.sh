@@ -1,4 +1,6 @@
-## Bash terminal spinner
+## :rocket: Ora.sh - Modern Bash Terminal Spinner
+[![Bash](https://img.shields.io/badge/language-Bash-green.svg)](https://github.com/kahkhang/ora.sh) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kahkhang/ora.sh/master/LICENSE) [![Twitter](https://img.shields.io/twitter/url/https/github.com/kahkhang/ora.sh.svg?style=social)](https://twitter.com/intent/tweet?text=%23ora.sh%20rocks%21&url=%5Bobject%20Object%5D)
+
 Ora.sh is a dependency-free elegant terminal spinner.
 
 ![](ora.gif)
