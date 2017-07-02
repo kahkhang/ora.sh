@@ -1,7 +1,7 @@
 ## Bash terminal spinner
 Ora.sh is a dependency-free elegant terminal spinner.
 
-![](out.gif)
+![](ora.gif)
 
 ### Example
 
