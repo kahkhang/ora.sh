@@ -5,6 +5,11 @@ Ora.sh is a dependency-free elegant terminal spinner.
 
 ![](ora.gif)
 
+### Usage
+```sh
+spinner [function_name] [output_variable (Optional)]
+```
+
 ### Example
 
 ```sh
