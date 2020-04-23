@@ -41,7 +41,7 @@ spinner() {
         printf "\b\b\b"
     done
     _TASK_OUTPUT="$(cat $tempfile)"
-    rm $tempfile
+    rm -f $tempfile
     _SPINNER_POS=$i
 
     if [ -z $3 ]; then :; else
