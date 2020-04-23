@@ -7,7 +7,7 @@ BOLD=$(tput bold)
 
 spinner() {
 	FUNCTION_NAME="$2"
-	VARIABLE_NAME="$3"
+	VARIABLE_NAME="${3:-}"
 
     _TASK_OUTPUT=""
     local delay=0.05
