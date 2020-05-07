@@ -6,6 +6,9 @@ NORMAL=$(tput sgr0)
 BOLD=$(tput bold)
 
 spinner() {
+	FUNCTION_NAME="$2"
+	VARIABLE_NAME="${3:-}"
+
     _TASK_OUTPUT=""
     local delay=0.05
     local list=( $(echo -e '\xe2\xa0\x8b')
@@ -22,7 +25,7 @@ spinner() {
     local tempfile
     tempfile=$(mktemp)
 
-    eval $2 >> $tempfile 2>/dev/null &
+    eval $FUNCTION_NAME >> $tempfile 2>/dev/null &
     local pid=$!
 
     tput sc
@@ -41,10 +44,10 @@ spinner() {
         printf "\b\b\b"
     done
     _TASK_OUTPUT="$(cat $tempfile)"
-    rm $tempfile
+    rm -f $tempfile
     _SPINNER_POS=$i
 
-    if [ -z $3 ]; then :; else
-      eval $3=\'"$_TASK_OUTPUT"\'
+    if [ -z $VARIABLE_NAME ]; then :; else
+      eval $VARIABLE_NAME=\'"$_TASK_OUTPUT"\'
     fi
 }
